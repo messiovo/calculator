@@ -9,7 +9,7 @@ function App() {
       </div>
       <Calc/>
       <div className='mt-10'>
-      <p className='text-center font-semibold p-20'>&copy; Messiovo</p>
+      <p className='text-right font-semibold p-20'>&copy; Messiovo</p>
       </div>
     </div>
   );
