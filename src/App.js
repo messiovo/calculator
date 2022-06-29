@@ -8,8 +8,8 @@ function App() {
       <h2 className="text-center text-white font-semibold py-10 text-2xl">CALCULATOR</h2>
       </div>
       <Calc/>
-      <div className='mt-10'>
-      <p className='text-right font-semibold p-20'>&copy; Messiovo</p>
+      <div className=''>
+      <p className='text-center font-semibold p-20'>&copy; Messiovo</p>
       </div>
     </div>
   );
