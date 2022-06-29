@@ -2,15 +2,39 @@ import React, {useState} from 'react'
 
 const Calc = () => {
   const [val, setVal] = useState("")
+
+const del = () =>{
+  try{
+    setVal(val.slice(0, -1))
+  }catch(error){
+    setVal("")
+  }
+}
+
+const del2 = () =>{
+  try{
+    setVal("")
+  }catch(error){
+   
+  }
+}
+const doCalc = () => {
+  try{
+      setVal(eval(val));
+  }catch(error){
+
+  }
+}
+
   return (
     <div className='m-auto border-2 w-80 mt-20 rounded-lg bg-neutral-500'>
         <input type="text" className='p-2 shadow-md focus:outline-none border-2 rounded-lg m-10'
         value={val}/>
         <div className="grid grid-cols-4 gap-4 px-4 pb-10 text-white">
-          <button className='bg-teal-900'>
+          <button className='bg-teal-900'value="C" onClick={()=> del()}>
             C
           </button>
-          <button className='bg-teal-900'value="del" onClick={(e)=> setVal(val + e.target.value)}>
+          <button className='bg-teal-900'value="del" onClick={()=> del2()}>
             del
           </button>
           <button className='bg-teal-900'value="%" onClick={(e) => setVal(val + e.target.value)}>
@@ -28,7 +52,7 @@ const Calc = () => {
           <button className='bg-teal-900'value="9" onClick={(e)=> setVal(val + e.target.value)}>
             9
           </button>
-          <button className='bg-teal-900'value="x" onClick={(e)=> setVal(val + e.target.value)}>
+          <button className='bg-teal-900'value="*" onClick={(e)=> setVal(val + e.target.value)}>
             x
           </button>
           <button className='bg-teal-900'value="4" onClick={(e)=> setVal(val + e.target.value)}>
@@ -61,7 +85,7 @@ const Calc = () => {
           <button className='bg-teal-900' value="." onClick={(e)=> setVal(val + e.target.value)}>
             .
           </button>
-          <button className='bg-teal-900'value="=" onClick={(e) => setVal(val + e.target.value)}>
+          <button className='bg-teal-900'value="=" onClick={() => doCalc()}>
             =
           </button>
 </div>
