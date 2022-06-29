@@ -85,7 +85,7 @@ const doCalc = () => {
           <button className='bg-teal-900' value="." onClick={(e)=> setVal(val + e.target.value)}>
             .
           </button>
-          <button className='bg-teal-900'value="=" onClick={() => doCalc()}>
+          <button className='bg-teal-900 'value="=" onClick={() => doCalc()}>
             =
           </button>
 </div>
