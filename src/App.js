@@ -8,7 +8,7 @@ function App() {
       <h2 className="text-center text-white font-semibold py-10 text-2xl">CALCULATOR</h2>
       </div>
       <Calc/>
-      <div className='bg-teal-900 mt-10 p-10'>
+      <div className='bg-teal-900 mt-10 p-10 max-h-full'>
       <p className='text-center text-white'>&copy; Messiovo</p>
       </div>
     </div>
